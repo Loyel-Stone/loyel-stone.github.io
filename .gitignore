@@ -1,0 +1,36 @@
+# dist/ contains maintained website source; do not ignore it.
+
+# Dependencies and caches
+node_modules/
+.cache/
+coverage/
+
+# macOS and editor temporary files
+.DS_Store
+.AppleDouble
+._*
+*.swp
+*.swo
+*~
+
+# Logs and temporary output
+*.log
+*.tmp
+/tmp/
+/temp/
+
+# Local environment and credential configuration
+.env
+.env.*
+.npmrc
+.netrc
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local data and historical QA captures, not website assets
+*.db
+*.sqlite
+*.sqlite3
+/docs/previews/

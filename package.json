@@ -1,0 +1,12 @@
+{
+  "name": "personal-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first static personal portfolio with a SayRight case study.",
+  "type": "module",
+  "scripts": {
+    "dev": "node preview.mjs",
+    "check": "node --check preview.mjs && node --check dist/assets/main.js && node scripts/check.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
