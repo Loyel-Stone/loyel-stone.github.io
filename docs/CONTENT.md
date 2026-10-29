@@ -44,7 +44,7 @@ Historical counts overlap across stages and must not be added as one total. Earl
 - Contact contains only the confirmed GitHub profile, the separate Public Demo and the local SayRight case study. Email, LinkedIn and CV are omitted; no fake form or download is presented.
 - The owner confirmed `https://github.com/Loyel-Stone` as the public GitHub profile and `https://github.com/Loyel-Stone/sayright-demo` as the Public Demo repository. Home and Contact link to the profile; Contact and the case study identify the demo separately from the complete private product source. No contribution statistics are inferred.
 - SayRight’s role section retains AI coding-tool disclosure without claiming sole implementation authorship or assigning a code-contribution ratio. Product decisions, requirements, collaboration and acceptance work remain the stated personal scope.
-- All five pages retain `noindex, nofollow` pending an explicit publication instruction. Removing editorial copy does not authorise deployment or a repository visibility change.
+- The owner has approved search indexing at `https://loyel-stone.github.io/`, without a custom domain or tracking. All five pages omit `noindex, nofollow`, use their own canonical and matching text Open Graph metadata, and appear in the five-URL sitemap. The Home canonical is the root URL. No sharing image is supplied or inferred. This SEO approval does not authorise deployment or a repository visibility change.
 
 ## Page structure
 

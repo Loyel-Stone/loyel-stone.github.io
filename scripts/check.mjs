@@ -6,6 +6,17 @@ import { resolve, dirname } from 'node:path';
 const root = fileURLToPath(new URL('../dist/', import.meta.url));
 const pages = (await readdir(root)).filter((file) => file.endsWith('.html'));
 const requiredPages = ['index.html', 'about.html', 'sayright.html', 'skills.html', 'contact.html'];
+const origin = 'https://loyel-stone.github.io/';
+const canonicalFor = (page) => new URL(page === 'index.html' ? '' : page, origin).href;
+const titles = new Set();
+const descriptions = new Set();
+function metadata(html, attribute, key, page) {
+  const tags = [...html.matchAll(/<meta\b[^>]*>/g)].filter(([tag]) => tag.includes(`${attribute}="${key}"`));
+  assert.equal(tags.length, 1, `${page}: exactly one ${key}`);
+  const content = tags[0][0].match(/\bcontent="([^"]*)"/)?.[1];
+  assert(content?.trim(), `${page}: nonempty ${key}`);
+  return content;
+}
 for (const page of requiredPages) assert(pages.includes(page), `Missing core page: ${page}`);
 let references = 0;
 let publicLinks = 0;
@@ -19,7 +30,23 @@ for (const page of pages) {
   assert.match(html, /<html lang="en">/, `${page}: language`);
   assert.equal((html.match(/<h1[\s>]/g) || []).length, 1, `${page}: one primary heading`);
   assert.equal((html.match(/<main[\s>]/g) || []).length, 1, `${page}: main landmark`);
-  assert.match(html, /name="robots" content="noindex, nofollow"/, `${page}: draft indexing directive`);
+  assert.doesNotMatch(html, /<meta\b[^>]*\b(?:noindex|nofollow|none)\b/i, `${page}: no restrictive crawler directive`);
+  const canonicalTags = [...html.matchAll(/<link\b[^>]*\brel="canonical"[^>]*>/g)];
+  assert.equal(canonicalTags.length, 1, `${page}: exactly one canonical link`);
+  assert.equal(canonicalTags[0][0].match(/\bhref="([^"]+)"/)?.[1], canonicalFor(page), `${page}: canonical URL`);
+  const pageTitles = [...html.matchAll(/<title>([^<]+)<\/title>/g)];
+  assert.equal(pageTitles.length, 1, `${page}: exactly one title`);
+  const title = pageTitles[0][1];
+  const description = metadata(html, 'name', 'description', page);
+  assert(!titles.has(title) && !descriptions.has(description), `${page}: distinct title and description`);
+  titles.add(title);
+  descriptions.add(description);
+  assert.equal(metadata(html, 'property', 'og:title', page), title, `${page}: Open Graph title matches page`);
+  assert.equal(metadata(html, 'property', 'og:description', page), description, `${page}: Open Graph description matches page`);
+  assert.equal(metadata(html, 'property', 'og:site_name', page), 'Loyel Stone', `${page}: Open Graph brand`);
+  assert.equal(metadata(html, 'property', 'og:type', page), 'website', `${page}: Open Graph type`);
+  assert.equal(metadata(html, 'property', 'og:url', page), canonicalFor(page), `${page}: Open Graph URL matches canonical`);
+  assert.doesNotMatch(html, /<meta\b[^>]*(?:property|name)="(?:og:image[^"]*|twitter:image[^"]*)"/i, `${page}: no unapproved sharing image`);
   assert.match(html, /class="skip-link"/, `${page}: keyboard skip link`);
   assert.match(html, /<title>[^<]*Loyel Stone[^<]*<\/title>/, `${page}: Loyel Stone page title`);
   assert.match(html, /name="description" content="[^"]*Loyel Stone/, `${page}: SEO brand name`);
@@ -28,7 +55,9 @@ for (const page of pages) {
   assert(!html.includes('[Your name]'), `${page}: unconfirmed name placeholder`);
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(new Set(ids).size, ids.length, `${page}: duplicate IDs`);
-  for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
+  // Canonical metadata uses the confirmed site URL; navigation still uses the approved-link policy.
+  const linkedContent = html.replace(canonicalTags[0][0], '');
+  for (const match of linkedContent.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
     const target = match[1];
     if (/^https?:/.test(target)) {
       assert(match[0].startsWith('href=') && approvedPublicLinks.has(target), `${page}: unapproved external link or remote asset ${target}`);
@@ -46,6 +75,16 @@ for (const page of pages) {
     references++;
   }
 }
+const robots = await readFile(resolve(root, 'robots.txt'), 'utf8');
+assert.deepEqual(robots.split(/\r?\n/).map((line) => line.trim()).filter(Boolean), [
+  'User-agent: *', 'Allow: /', `Sitemap: ${origin}sitemap.xml`,
+], 'robots.txt: allow all crawlers and declare the confirmed sitemap only');
+const sitemap = await readFile(resolve(root, 'sitemap.xml'), 'utf8');
+// This site uses a deliberately small XML vocabulary: urlset > url > loc, with absolute URLs.
+assert.match(sitemap, /^<\?xml version="1\.0" encoding="UTF-8"\?>\s*<urlset xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">\s*(?:<url>\s*<loc>[^<&]+<\/loc>\s*<\/url>\s*)+<\/urlset>\s*$/, 'sitemap.xml: supported well-formed XML structure');
+const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+assert.equal(new Set(sitemapUrls).size, sitemapUrls.length, 'sitemap.xml: no duplicate URLs');
+assert.deepEqual([...sitemapUrls].sort(), requiredPages.map(canonicalFor).sort(), 'sitemap.xml: only the five approved canonical page URLs');
 const home = await readFile(resolve(root, 'index.html'), 'utf8');
 const projectCards = [...home.matchAll(/<article\b[^>]*class="featured-project"[^>]*>([\s\S]*?)<\/article>/g)];
 assert(projectCards.length > 0, 'Expected at least one real project card');
@@ -82,4 +121,4 @@ const study = await readFile(resolve(root, 'sayright.html'), 'utf8');
 for (const id of ['problem', 'vision', 'role', 'features', 'technical', 'challenges', 'testing', 'status']) {
   assert(study.includes(`class="case-section" id="${id}"`), `Missing case-study chapter: ${id}`);
 }
-console.log(`PASS: ${pages.length} pages; ${projectCards.length} project card(s); ${references} local links/assets; ${publicLinks} approved public links; Loyel Stone brand and confirmed education; eight SayRight chapters; font files and licenses.`);
+console.log(`PASS: ${pages.length} pages; ${projectCards.length} project card(s); ${references} local links/assets; ${publicLinks} approved public links; canonical/Open Graph metadata; crawlable robots.txt and five-URL sitemap; Loyel Stone brand and confirmed education; eight SayRight chapters; font files and licenses.`);

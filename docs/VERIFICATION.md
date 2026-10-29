@@ -1,5 +1,15 @@
 # Portfolio verification records
 
+## SEO launch preparation — 2026-10-29
+
+- Starting revision: `604d1090b41692537ad348b2e17bd06aed3b7756` on clean `main`. This entry supersedes earlier indexing restrictions; the older records below describe the policy at their respective stages.
+- `npm run check`: PASS; five pages, 77 local links/assets, four approved public-link occurrences, unique canonical/title/description metadata, matching text Open Graph metadata, crawlable robots.txt and an exact five-URL sitemap. Existing brand, education, chapter, font/license and accessibility-structure checks remain in place.
+- `node --check scripts/check.mjs`, `node --check scripts/check-pages.mjs` and `node scripts/check-pages.mjs`: PASS; the artifact now contains 15 tracked regular files with 91 root-domain URL references. Only the exact root filenames `robots.txt` and `sitemap.xml` were added to the publication-type allowlist; hidden, untracked and linked files remain rejected.
+- Independent Python standard-library HTML/XML parsing: PASS; correct sitemap namespace and five exact canonical URLs, matching decoded Open Graph text, no robots restriction or unapproved sharing image. All five original titles, meta descriptions and complete page bodies match the starting revision exactly.
+- Controlled offline fixtures: one valid site accepted; seven invalid variants rejected for the expected reasons (Home canonical using index.html, crawler noindex, wrong Open Graph URL, unapproved image, blocking robots rule, extra sitemap page and malformed XML). Only ignored temporary copies inside this project were used and removed.
+- `git diff --check` and staged whitespace checks: PASS. Pages workflow, CSS, JavaScript, fonts, licenses, favicon, package configuration and preview server remain unchanged. No new dependency, analytics or tracking code was introduced. No browser/visual QA was repeated for unchanged page bodies and assets.
+- These are static preparation results. Repository visibility remains Private; no Pages enablement, workflow dispatch, deployment, search-account verification or sitemap submission is part of this task. Live HTTP headers, actual search indexing and social-platform rendering remain unverified until authorised publication.
+
 ## GitHub Pages preparation — 2026-10-29
 
 - Starting revision: `dad1446fbc0eb1f2b588117d3f13eea7c8856ed0` on clean `main`.

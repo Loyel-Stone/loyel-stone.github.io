@@ -23,6 +23,8 @@ dist/                      可预览的静态网站，不是自动生成的构�
   sayright.html            8 个部分的英文 Case Study
   skills.html              有证据支持的项目技术与工作方法
   contact.html             GitHub 公开主页、Public Demo 与案例入口
+  robots.txt               允许抓取，并声明正式 sitemap 地址
+  sitemap.xml              仅列出五个正式页面的 canonical URL
   assets/styles.css        既有视觉、项目卡片反馈、响应式与打印样式
   assets/main.js           移动导航与案例目录高亮
   assets/favicon.svg       原创几何标记
@@ -51,7 +53,9 @@ npm run check
 
 ## GitHub Pages 工程准备（未发布）
 
-已准备只支持手动触发的 `.github/workflows/pages.yml`，仅上传 `dist/`，不使用 push 自动发布、不安装依赖。`node scripts/check-pages.mjs` 可离线检查发布文件范围、链接类型及根域名路径。当前仓库仍为 Private，Pages 未启用，workflow 未触发，五页保留 `noindex, nofollow`。
+已准备只支持手动触发的 `.github/workflows/pages.yml`，仅上传 `dist/`，不使用 push 自动发布、不安装依赖。`node scripts/check-pages.mjs` 可离线检查发布文件范围、链接类型及根域名路径。当前仓库仍为 Private，Pages 未启用，workflow 未触发。
+
+Owner 已确认正式网址 `https://loyel-stone.github.io/`，允许搜索引擎收录，不使用自定义域名、分析或追踪服务。五页已移除 `noindex, nofollow`，各有唯一 canonical 与文字 Open Graph 信息；首页 canonical 为根网址。`robots.txt` 允许抓取，`sitemap.xml` 仅包含五个正式页面。没有批准的分享图片，因此不添加 `og:image`。这些配置不会启用 Pages，也不保证上线后的收录时间或分享平台展示效果。
 
 正式发布需要 Owner 明确批准，再按 [部署说明](docs/DEPLOYMENT.md) 操作仓库可见性、Pages 来源、环境限制和手动运行。将配置提交到 GitHub 不等于部署。
 
@@ -71,6 +75,6 @@ npm run check
 
 1. 新增个人经历、联系方式、技术熟练度或具体代码贡献说明时，先取得可靠材料和公开授权，再按 `docs/CONTENT.md` 更新。不要从私人项目自动取材。
 2. SayRight 仍使用注明日期的审计摘要；新增截图或状态更新需 Owner 提供脱敏材料，不推断发布状态或学习效果。
-3. 获得明确发布指令后，再确定托管、域名与分享元信息，并单独决定移除 `noindex, nofollow`。当前保留这两个指令；它们不是访问控制。GitHub 私有仓库同步不等于网站部署。
+3. 搜索策略和正式网址已确认；获得明确发布指令后，再按部署说明操作 Public 可见性、Pages 来源和手动运行。SEO 配置不提供访问控制，也不代表已经发布；GitHub 私有仓库同步不等于网站部署。
 
 页面无远程字体、分析脚本、表单、追踪或外部运行时请求。Newsreader 和 DM Sans 原始字体来自 Google Fonts 官方仓库，许可证保留在 `dist/assets/fonts/`。来源见 `docs/DESIGN.md`。
