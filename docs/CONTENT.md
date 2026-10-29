@@ -35,26 +35,30 @@ These are summaries of the conversation's audit, not independently rerun or newl
 
 Historical counts overlap across stages and must not be added as one total. Earlier failures retain their outcomes. The website's own checks are entirely separate from these SayRight records.
 
-## Placeholder conventions
+## Public content policy
 
-- `[Bracketed text]`: missing factual information or evidence.
-- `Draft wording / proposed`: suggested personal voice, values or interests for owner review.
+- Public pages contain no factual placeholders or internal editing prompts. Missing information is omitted until supported by owner-supplied evidence and approved for publication.
+- Unconfirmed personal-story, interests and philosophy copy has been removed rather than presented as biography.
 - Project technologies describe audited work, not personal proficiency ratings or proof of independent implementation.
 - The paper artwork and language/AI/learning diagram are original conceptual illustrations, not product screenshots or architecture evidence.
-- Remaining contact placeholders have no active links. No fake form or download is presented.
-- The owner confirmed `https://github.com/Loyel-Stone` as the public GitHub profile and `https://github.com/Loyel-Stone/sayright-demo` as the Public Demo repository. Home and Contact link to the profile; the case study labels the demo separately from the complete private product source. No repository contents or contribution statistics were inspected or inferred.
+- Contact contains only the confirmed GitHub profile, the separate Public Demo and the local SayRight case study. Email, LinkedIn and CV are omitted; no fake form or download is presented.
+- The owner confirmed `https://github.com/Loyel-Stone` as the public GitHub profile and `https://github.com/Loyel-Stone/sayright-demo` as the Public Demo repository. Home and Contact link to the profile; Contact and the case study identify the demo separately from the complete private product source. No contribution statistics are inferred.
+- SayRight’s role section retains AI coding-tool disclosure without claiming sole implementation authorship or assigning a code-contribution ratio. Product decisions, requirements, collaboration and acceptance work remain the stated personal scope.
+- All five pages retain `noindex, nofollow` pending an explicit publication instruction. Removing editorial copy does not authorise deployment or a repository visibility change.
 
 ## Page structure
 
 | Page | Reader's question | Content |
 | --- | --- | --- |
 | Home | What is this person's focus? | Software/product positioning, Owner's working scope, SayRight learning loop and engineering themes |
-| About | What is their background and direction? | Loyel's background, confirmed degree/graduation, proposed interests and philosophy; no institution or legal name |
+| About | What is their background and direction? | Confirmed work scope, postgraduate intention and degree/graduation; no invented personal story, interests, institution or legal name |
 | SayRight | What did they build and how did they think? | Eight chapters, implementation narrative, two engineering challenges, bounded historical evidence and development status |
-| Skills | What can they substantiate? | Audited project technologies and methods; personal implementation responsibilities pending |
-| Contact | How can I reach them? | Confirmed GitHub profile; email, LinkedIn and CV placeholders remain |
+| Skills | What can they substantiate? | Audited project technologies and methods, distinguished from personal proficiency ratings |
+| Contact | Where can I find their public work? | Confirmed GitHub profile, separate SayRight Public Demo and local case study |
 
-## Owner input needed
+## Optional future additions requiring Owner evidence
+
+These are not gaps displayed to visitors or prerequisites for publication. Keep them omitted unless the owner chooses to supply verified, publishable material.
 
 - A short personal development story, if the owner chooses to add one. Do not request or infer a legal name or institution for publication.
 - Postgraduate interests and motivation. Do not imply applications or offers already exist.
@@ -79,4 +83,4 @@ Prefer one specific, verifiable narrative to a long feature list. Supply only sa
 
 For every substantive claim record: exact claim, source supplied by owner, version/date, scope/limitations, sanitisation needed, approval to publish. Keep any private evidence outside the website's public `dist/` directory. A public claim can cite a sanitised excerpt without linking a private repository.
 
-No additional accomplishments or metrics are inferred beyond the supplied audit. No grades, customers, testimonials, job history, additional public repositories or personal coding ratios are invented. The 29 October 2026 brand refinement preserves fonts, colour tokens, core layouts and JavaScript. Its only CSS additions are a reusable project-list container and restrained card hover/focus feedback; Projects navigation now points to the existing collection anchor. No new project or product screenshot is introduced. The SayRight status remains the dated audit snapshot and is not silently refreshed.
+No additional accomplishments or metrics are inferred beyond the supplied audit. No grades, customers, testimonials, job history, additional public repositories or personal coding ratios are invented. The 29 October 2026 content closeout removes six factual placeholders and internal editing copy while retaining all five pages, shared CSS, fonts and JavaScript. No new project or product screenshot is introduced. The SayRight status remains the dated audit snapshot and is not silently refreshed.

@@ -1,4 +1,22 @@
-# First-version verification — 2026-10-28
+# Portfolio verification records
+
+## Content closeout — 2026-10-29
+
+- `npm run check`: PASS. Five pages, one project card, 77 local links/assets, four approved public-link occurrences, Loyel Stone branding, confirmed education, eight SayRight chapters, local fonts and licenses.
+- `git diff --check`: PASS. Shared CSS, JavaScript, fonts, favicon, preview server, package configuration, check script and ignore rules are unchanged from the baseline.
+- Removed all six factual placeholders, the unconfirmed About interests/philosophy and visitor-facing editing prompts. Contact now contains only the confirmed GitHub profile, separate Public Demo and local case study. All five pages retain `noindex, nofollow`.
+- SayRight comparison: the seven chapters outside My Role are unchanged; the role paragraph remains unchanged. Only the contribution placeholder and its editing note were replaced with a concise AI-tool / non-sole-authorship boundary. Historical test counts, their scope, development status and release limitations remain unchanged.
+- Local HTTP: all 13 tracked files under `dist/` returned 200. README, content documentation, Git configuration and a missing page returned 404; POST returned 405.
+- In-app browser: all five pages at 320, 390, 768, 1024 and 1440 CSS pixels (25 views) had no horizontal overflow. Each view retained one h1, one main landmark, one current navigation item, loaded fonts and named links/buttons; no visible factual placeholders or editing prompts were found.
+- At 390px on every page, Menu opened, Escape closed it and returned focus to Menu; keyboard activation of Skip to content focused main. The Home project link opened the SayRight case using Enter. Testing & Iteration navigation placed its heading below the sticky header. No console errors were captured during this test session.
+- Desktop Contact and mobile About, Skills and Contact were visually inspected. The Contact proof image is local-only under ignored `docs/previews/`; it is not a website asset or part of the commit.
+- Temporary viewport overrides were reset and the owned preview server was stopped after checking.
+
+These are portfolio checks, not fresh SayRight tests or a full WCAG audit. External GitHub link destinations were checked against the approved URLs; their contents were not audited. Physical devices, Safari and screen readers were not tested. No other project or private product repository was accessed. No website deployment, Pages activation or repository visibility change is authorised by this work.
+
+## Historical first-version verification — 2026-10-28
+
+The following records describe the initial version only; its content gaps and Git state are superseded by later work and the closeout above.
 
 ## Executed
 

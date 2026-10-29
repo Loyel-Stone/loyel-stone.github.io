@@ -27,7 +27,7 @@ Both are distributed under the SIL Open Font License 1.1. The original licenses 
 - Chapter anchors work natively; optional section highlighting is a progressive enhancement.
 - No hidden-on-load content or animation-dependent navigation. Only short hover transitions; reduced-motion preference disables motion. Chapter jumps are immediate so long-page navigation has predictable positioning.
 - Fluid type and layouts support small screens; the long case study has a desktop chapter rail and a compact mobile chapter list.
-- Contact remains an honest empty state. No inactive controls masquerade as real contact methods.
+- Contact presents the confirmed GitHub profile, separate Public Demo and local case study in the existing two-column layout. Unconfirmed contact methods are omitted.
 - Print CSS removes sticky navigation and presents the case study as a readable document.
 
 ## Maintenance and boundaries
@@ -36,6 +36,6 @@ Loyel Stone is the formal public brand and site name; navigation and first-perso
 
 The Home `.project-list` holds one semantic article per approved project: name, description, tags, status and a single local case-study link. Preserve SayRight first. A stretched native link makes the full card clickable; the same terracotta feedback applies to hover and keyboard focus, with an outer focus outline. Do not add focusable children or extra actions inside a card. No entrance animations, card movement or JavaScript click handlers are needed. The Projects navigation links to the existing collection; case pages mark that category current. See README for the extension procedure.
 
-Use semantic static HTML, CSS and small JavaScript enhancements. Keep personal facts and project claims subject to owner confirmation. Do not add new projects, fetch private project data, enable analytics, add remote APIs or publish without authorization. The current `noindex` directive is draft hygiene and does not provide privacy; local loopback preview is the current access boundary.
+Use semantic static HTML, CSS and small JavaScript enhancements. Keep personal facts and project claims subject to owner confirmation; omit unconfirmed material from visitor-facing pages. Do not add new projects, fetch private project data, enable analytics, add remote APIs or publish without authorization. Retain `noindex, nofollow` until explicitly authorised for publication; these directives do not provide privacy. Local preview serves only on loopback, and the GitHub repository remains private.
 
 For later Chinese support, use separate language pages and a meaningful language switch once content exists. Do not add a nonfunctional switch now.

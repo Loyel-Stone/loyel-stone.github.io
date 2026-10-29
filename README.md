@@ -1,4 +1,4 @@
-# Loyel Stone — local portfolio draft
+# Loyel Stone — personal portfolio
 
 Loyel Stone 的英文个人作品集，职业定位为 Independent Software & Product Developer，面向香港硕士申请、技术岗位与软件作品展示。导航及第一人称自述可简称 Loyel；GitHub 账号 Loyel-Stone、本地目录 loyel-portfolio 不变。SayRight 是当前唯一获准展示的项目。使用 Sites 的本地静态开发流程；未注册 Site、未部署、未公开发布。
 
@@ -21,17 +21,17 @@ dist/                      可预览的静态网站，不是自动生成的构�
   index.html               Home
   about.html               About
   sayright.html            8 个部分的英文 Case Study
-  skills.html              工作领域与待确认技术
-  contact.html             待确认联系方式
+  skills.html              有证据支持的项目技术与工作方法
+  contact.html             GitHub 公开主页、Public Demo 与案例入口
   assets/styles.css        既有视觉、项目卡片反馈、响应式与打印样式
   assets/main.js           移动导航与案例目录高亮
   assets/favicon.svg       原创几何标记
   assets/fonts/            本地字体及原始 OFL 许可证
 preview.mjs                仅监听 127.0.0.1，仅提供 dist 文件
 scripts/check.mjs          静态链接、结构与资产完整性检查
-docs/CONTENT.md            已知事实、占位内容与案例补充指南
+docs/CONTENT.md            已知事实、公开内容边界与案例补充指南
 docs/DESIGN.md             信息架构与视觉约定
-docs/VERIFICATION.md       本次实际执行的检查与验证边界
+docs/VERIFICATION.md       历次实际执行的检查与验证边界
 ```
 
 ## 修改内容
@@ -58,10 +58,10 @@ npm run check
 
 ## 公开前需要完成
 
-1. 补齐仍待确认的联系方式、CV、个人经历及具体代码贡献说明。正式品牌为 Loyel Stone，可简称 Loyel，不要求法定姓名；教育仅展示已确认的学位和毕业时间，不展示院校。
-2. 审核所有标有 draft / proposed 的第一人称表述。
-3. 按 `docs/CONTENT.md` 补充 SayRight 公开证据；不要从私人项目自动取材。
-4. 检查截图、CV、示例和链接中是否含个人数据或秘密。
-5. 确认发布后，再选择托管方式、设置真实域名与分享元信息，并决定移除 `noindex`。`noindex` 不是访问控制。
+页面已移除六处未确认占位、未经确认的兴趣／理念表述及访客可见的内部编辑提示。Contact 仅展示已确认的 GitHub 主页、SayRight Public Demo 和案例入口。没有公开邮箱、LinkedIn 或 CV；这些内容无需为了发布而补齐。正式品牌为 Loyel Stone，可简称 Loyel；教育仅展示已确认的学位和毕业时间，不展示院校或法定姓名。
+
+1. 新增个人经历、联系方式、技术熟练度或具体代码贡献说明时，先取得可靠材料和公开授权，再按 `docs/CONTENT.md` 更新。不要从私人项目自动取材。
+2. SayRight 仍使用注明日期的审计摘要；新增截图或状态更新需 Owner 提供脱敏材料，不推断发布状态或学习效果。
+3. 获得明确发布指令后，再确定托管、域名与分享元信息，并单独决定移除 `noindex, nofollow`。当前保留这两个指令；它们不是访问控制。GitHub 私有仓库同步不等于网站部署。
 
 页面无远程字体、分析脚本、表单、追踪或外部运行时请求。Newsreader 和 DM Sans 原始字体来自 Google Fonts 官方仓库，许可证保留在 `dist/assets/fonts/`。来源见 `docs/DESIGN.md`。
