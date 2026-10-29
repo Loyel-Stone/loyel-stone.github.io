@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 34"><path d="M2.5 33.5h25q2 0 2-2V15a14.5 14.5 0 0 0-29 0v16.5q0 2 2 2Z" fill="#f8f6f0" stroke="#93523b"/><path d="M7.5 11.5v14h5M22 11.5h-6l-2.5 2.5v3L22 22v3.5h-8" fill="none" stroke="#93523b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="110 110 400 461" role="img" aria-label="Loyel Stone arched LS mark, extended upper half">
+  <!-- Existing arched enclosure, kept separate from the inner geometry -->
+  <path d="M135.5 309 C135.5 213 213.5 137.5 310 137.5 S484.5 213 484.5 309 V531 Q484.5 540.5 475.5 540.5 H144.5 Q135.5 540.5 135.5 531 Z" fill="#f8f6f0" stroke="#93523b" stroke-width="9.2" stroke-linejoin="round"/>
+  <!-- L: only the vertical start is extended upward; lower V and both X tails keep original vertices. -->
+  <path d="M259 225 V307 L365 449" fill="none" stroke="#93523b" stroke-width="10" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <!-- Angular S: increased opening angle by raising upper endpoint. Vertex, lower arm and X are fixed. -->
+  <path d="M363 224 L307 285 L364 315 L252 449" fill="none" stroke="#93523b" stroke-width="10" stroke-linecap="butt" stroke-linejoin="miter"/>
+</svg>
