@@ -29,9 +29,12 @@ dist/                      可预览的静态网站，不是自动生成的构�
   assets/fonts/            本地字体及原始 OFL 许可证
 preview.mjs                仅监听 127.0.0.1，仅提供 dist 文件
 scripts/check.mjs          静态链接、结构与资产完整性检查
+scripts/check-pages.mjs    离线检查 dist 发布边界及根域名相对路径
+.github/workflows/pages.yml 仅手动触发的 GitHub Pages 配置，尚未执行
 docs/CONTENT.md            已知事实、公开内容边界与案例补充指南
 docs/DESIGN.md             信息架构与视觉约定
 docs/VERIFICATION.md       历次实际执行的检查与验证边界
+docs/DEPLOYMENT.md         Pages 配置、验证方法及 Owner 后续发布步骤
 ```
 
 ## 修改内容
@@ -45,6 +48,12 @@ npm run check
 ```
 
 这个检查不等于完整可访问性认证，也不证明 SayRight 本身的测试或产品质量。
+
+## GitHub Pages 工程准备（未发布）
+
+已准备只支持手动触发的 `.github/workflows/pages.yml`，仅上传 `dist/`，不使用 push 自动发布、不安装依赖。`node scripts/check-pages.mjs` 可离线检查发布文件范围、链接类型及根域名路径。当前仓库仍为 Private，Pages 未启用，workflow 未触发，五页保留 `noindex, nofollow`。
+
+正式发布需要 Owner 明确批准，再按 [部署说明](docs/DEPLOYMENT.md) 操作仓库可见性、Pages 来源、环境限制和手动运行。将配置提交到 GitHub 不等于部署。
 
 ## 增加第二个真实项目
 

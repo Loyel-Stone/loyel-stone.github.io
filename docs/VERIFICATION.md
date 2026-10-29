@@ -1,5 +1,15 @@
 # Portfolio verification records
 
+## GitHub Pages preparation — 2026-10-29
+
+- Starting revision: `dad1446fbc0eb1f2b588117d3f13eea7c8856ed0` on clean `main`.
+- `npm run check`: PASS; five pages, 77 local links/assets, four approved public-link occurrences, eight SayRight chapters, fonts/licenses and existing `noindex, nofollow` directives.
+- `node --check scripts/check-pages.mjs` and `node scripts/check-pages.mjs`: PASS; 13 tracked regular publication files and 80 root-domain URL references. No hidden paths, symlinks, hard links, untracked files or unapproved file types under `dist/`.
+- actionlint 1.7.12: PASS for `.github/workflows/pages.yml` with optional ShellCheck/Pyflakes integration disabled. The temporary official Darwin ARM64 archive was verified against its published SHA-256; no project dependency was added.
+- Parsed-YAML policy assertions: PASS for dispatch-only trigger, main/repository guard, empty global permissions, minimal per-job permissions, dependent deployment, `github-pages` environment, SHA-pinned official actions, `dist/` artifact and `enablement: false`. No custom secret references or additional shell deployment commands.
+- `git diff --check`: PASS. All `dist/` bytes match the starting revision, including five HTML pages, CSS, JavaScript, fonts, licenses and favicon. No visual or interaction changes; browser QA was not repeated for unchanged assets.
+- This is local static validation only. No Actions run, artifact upload, Pages enablement, deployment, live HTTPS/site check or repository visibility change was performed. Publication remains an Owner action described in `docs/DEPLOYMENT.md`.
+
 ## Content closeout — 2026-10-29
 
 - `npm run check`: PASS. Five pages, one project card, 77 local links/assets, four approved public-link occurrences, Loyel Stone branding, confirmed education, eight SayRight chapters, local fonts and licenses.
