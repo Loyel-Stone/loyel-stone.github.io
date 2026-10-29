@@ -38,8 +38,12 @@ The Home `.project-list` holds one semantic article per approved project: name, 
 
 Use semantic static HTML, CSS and small JavaScript enhancements. Keep personal facts and project claims subject to owner confirmation; omit unconfirmed material from visitor-facing pages. Do not add new projects, fetch private project data, enable analytics, add remote APIs or publish updates without authorization. The approved SEO policy permits indexing at `https://loyel-stone.github.io/` with no custom domain. Use one canonical per page, matching text Open Graph metadata, crawlable robots.txt and a five-page sitemap; omit unapproved sharing images. SEO metadata does not provide privacy or authorise deployment. Local preview serves only on loopback. The repository is Public and GitHub Pages is live; updates require a separate manual deployment. ChatGPT Sites has not been created for this project. Actual indexing is unverified.
 
-## Future logo direction — not implemented
+## Refined arch and LS mark
 
-Retain the current arch outline and its quiet visual character. Explore replacing the internal abstract crossing lines with a recognisable L + S monogram, using an original, minimal construction suited to warm paper, Newsreader and DM Sans. Do not copy another brand. This is an Owner-approved direction for future exploration, not a completed logo or trademark claim. The current mark, favicon and CSS remain unchanged.
+The source now retains the arch outline and warm-paper/terracotta palette with an original geometric L + S interior. The L is a short right-angle stroke; the S uses a stepped top and diagonal centre, with open spacing between strokes. No font glyph or another brand's artwork is used. Navigation and browser favicon share `dist/assets/favicon.svg`; navigation keeps its existing 30 × 34 CSS-pixel box, brand text and spacing.
+
+The original and refined marks were compared at actual 16, 20, 24, 32 and 48-pixel icon sizes and in the navigation. The refined icon uses more of the available favicon canvas than the old padded design; the 16-pixel rendering remains a small monogram, not a promise of equally clear lettering on every browser or display. This is a source refinement awaiting Owner acceptance and a separate deployment, not a trademark-registration or legal-clearance claim. Original source remains recoverable from Git history; comparison captures are local and ignored.
+
+The existing Education section supports additional factual qualification/date entries when real milestones are confirmed. No future admission, enrolment or graduation entry is added in advance.
 
 For later Chinese support, use separate language pages and a meaningful language switch once content exists. Do not add a nonfunctional switch now.

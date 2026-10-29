@@ -66,6 +66,12 @@ git diff --check
 
 后续部署和保留历史的回滚方法见 [部署说明](docs/DEPLOYMENT.md)。不需要重复切换仓库可见性或重新启用 Pages。GitHub Pages 与 ChatGPT Sites 的版本、权限和发布流程相互独立。
 
+## 当前本地品牌与 Sites 准备
+
+导航与 favicon 已在源码中共用一个拱门 LS SVG；导航保持 30×34，品牌文字与布局不变。此修改仍需单独手动部署才会出现在正式网站。长期定位和 Education 本轮仅复核，五页正文及 SayRight 案例没有改写。
+
+独立 Sites 适配副本位于相邻的 `../loyel-portfolio-sites`，不属于本仓库，也不应提交到这里。副本保留五页、样式、JavaScript、字体及许可证；采用 `noindex, follow`、不发布第二份 sitemap，并继续将 canonical 指向正式主站。它只有本地静态 manifest，没有 project ID、Git 仓库或远端；尚未创建 ChatGPT Site。后续注册、账户额度／平台访问分析和精选作品入口仍须 Owner 确认，见 [Sites 记录](docs/SITES-COMPATIBILITY.md)。
+
 ## 增加第二个真实项目
 
 1. 在 `dist/index.html` 的 `.project-list` 内复制现有完整 `<article class="featured-project">`。SayRight 保留第一张，下一张放在后面，不需要改布局或 JavaScript。

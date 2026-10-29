@@ -179,28 +179,13 @@ p+p {
   text-decoration: none
 }
 
+/* One SVG supplies both the navigation mark and the browser favicon. */
 .brand-mark {
   width: 30px;
   height: 34px;
   position: relative;
   display: inline-block;
-  border: 1px solid var(--clay);
-  border-radius: 15px 15px 2px 2px
-}
-
-.brand-mark:before,.brand-mark:after {
-  content: '';
-  position: absolute;
-  top: 7px;
-  bottom: 6px;
-  border-left: 1px solid var(--clay);
-  transform: rotate(24deg);
-  left: 12px
-}
-
-.brand-mark:after {
-  transform: rotate(-24deg);
-  left: 16px
+  background: url('favicon.svg') center/30px 34px no-repeat
 }
 
 .brand-name {

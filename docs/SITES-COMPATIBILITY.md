@@ -1,5 +1,19 @@
 # ChatGPT Sites compatibility investigation — 29 October 2026
 
+## Current local preparation follow-up
+
+The Owner has now authorised and received a separate `loyel-portfolio-sites` working copy beside the main project. It was derived from the accepted `edd0e8fa88cae59e34741de65290a575a44a57a9` source with the verified LS asset refinement from the same task. It contains 14 static website files, font licenses, a loopback preview, dependency-free local checks, a preparation README and `.openai/hosting.json` declaring only `static.directory: "dist"`. There is no copied or newly initialised Git repository, remote, GitHub Actions workflow, historical screenshot or credential. No actual Site, source-write grant, saved remote version or deployment exists.
+
+All five page bodies and shared assets match the main source. Only the secondary copy's SEO policy differs: each page has `noindex, follow`; robots.txt permits reading that directive and advertises no sitemap; sitemap.xml is omitted. Canonical and Open Graph URLs continue to identify GitHub Pages as the primary site. Indexing directives are not access control or a guarantee of search-engine behaviour.
+
+The installed official static preparer was run locally and returned `static` with no `project_id` field present. It preserved the complete static tree in ignored local staging; this does not register a Site or prove production-host routing. The local copy's checks use an explicit static-file allowlist rather than the main Git index. Do not apply those secondary SEO expectations or generated staging metadata to the GitHub Pages checker.
+
+Both local previews passed direct-file HTTP, responsive and basic keyboard checks. Before registration, the Owner still needs to accept this copy, confirm account eligibility/quota, decide whether Sites' built-in analytics is acceptable, and verify whether the personal-profile Featured works UI can select the intended Site. Registration must supply a real returned project ID; do not fabricate one. A new, independent Sites source repository, saving a version and publishing each remain separately authorised future steps.
+
+## Original investigation and proposed flow — historical context
+
+The following investigation predates the authorised local copy. Statements about no copy or manifest describe that earlier investigation; the follow-up above is the current preparation state.
+
 ## Conclusion and evidence level
 
 **The current static portfolio is compatible with the documented Sites project format.** This is a source/configuration assessment, not a successful Sites deployment or a guarantee of personal-profile placement. No Site, hosting manifest, adaptation copy, source credential, saved version or deployment was created during this investigation.

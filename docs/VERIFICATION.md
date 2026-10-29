@@ -1,5 +1,16 @@
 # Portfolio verification records
 
+## Arch/LS refinement and isolated Sites preparation — 29 October 2026
+
+- Starting main revision: `edd0e8fa88cae59e34741de65290a575a44a57a9`, clean main. The only website-source changes are the favicon SVG and the `.brand-mark` CSS block; all five HTML files, SayRight content, education, SEO, JavaScript, fonts and Pages workflow remain byte-identical to the accepted revision.
+- Original/candidate rendered comparison at navigation size and 16, 20, 24, 32 and 48-pixel icon sizes: the LS source was retained after review. Both navigation and favicon now reference one SVG. The navigation box remains 30 × 34; original warm-paper and terracotta values remain. Local comparison/mobile captures are ignored under `docs/previews/`, not website assets or committed evidence images.
+- Main `npm run check`, `node scripts/check-pages.mjs`, `git diff --check`: PASS; 15 tracked publication files, 77 HTML local references and 92 root-domain references including the shared SVG background. Main indexing policy remains unchanged.
+- The independent Sites copy has 14 static files, no .git or .github, no remote and no project_id. Its `npm run check` passed JavaScript syntax, five-page structure, four approved public-link occurrences, canonical/Open Graph consistency, font/license checks, exact file allowlist, 86 root-domain references and the secondary noindex/no-sitemap policy. Body/asset byte comparison passed against the main source; only mirror SEO differs.
+- Official local `prepare-site-build.cjs`: returned `static` for the copy without a project ID. All 14 website files were preserved in ignored staging, with only generated hosting metadata added. No Site API, registration, remote save or deployment was invoked.
+- Browser evidence: both loopback hosts, five pages each at actual 320, 390, 768 and 1440 CSS pixels (40 verified combinations), no horizontal overflow; fonts loaded; decorative mark semantics and 30 × 34 dimensions preserved. At 390px on both hosts, Menu/close, Escape focus restoration, Skip to content and Enter on the project link passed. No console errors were captured during the checked journey.
+- Local HTTP: all 15 main and 14 copy publication files returned 200 with exact source bytes. Root manifest, Git configuration and README probes returned 404 on both preview servers. These checks establish local static behaviour, not Sites-host MIME/routing support or complete WCAG conformance. Browser-specific native favicon treatment, Safari, physical devices and screen readers were not separately tested.
+- Long-term positioning was reviewed with no rewrite; existing education can accept additional confirmed records later, with none invented now. Sites profile placement, account quotas and acceptance of platform analytics remain Owner decisions. No GitHub Pages dispatch is part of this source-only task; temporary preview servers and viewport overrides are cleaned up after inspection.
+
 ## Current production status — 29 October 2026
 
 - Official site: `https://loyel-stone.github.io/`; Public repository `Loyel-Stone/loyel-stone.github.io`; GitHub Pages enabled.
