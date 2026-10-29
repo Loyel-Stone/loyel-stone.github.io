@@ -2,7 +2,7 @@
 
 Loyel Stone 的长期英文个人作品集，职业定位为 Independent Software & Product Developer。网站记录真实软件项目、产品决策和工程实践，不绑定某次申请或求职阶段。导航及第一人称自述可简称 Loyel；SayRight 是当前唯一获准展示的项目。
 
-正式网站：[loyel-stone.github.io](https://loyel-stone.github.io/)；Public 源码仓库：[Loyel-Stone/loyel-stone.github.io](https://github.com/Loyel-Stone/loyel-stone.github.io)。GitHub Pages 已于 **2026 年 10 月 29 日**上线，首次部署提交为 `a018a7550ef4dc6479ee0c24e9da5ae602fc8754`，[Actions Run 40810073671](https://github.com/Loyel-Stone/loyel-stone.github.io/actions/runs/40810073671) 成功，五页已由 Owner 实际访问验收。
+正式网站：[loyel-stone.github.io](https://loyel-stone.github.io/)；Public 源码仓库：[Loyel-Stone/loyel-stone.github.io](https://github.com/Loyel-Stone/loyel-stone.github.io)。GitHub Pages 已于 **2026 年 10 月 29 日**上线。首次部署提交为 `a018a7550ef4dc6479ee0c24e9da5ae602fc8754`（[Run 40810073671](https://github.com/Loyel-Stone/loyel-stone.github.io/actions/runs/40810073671)）；同日通过手动部署更新至 `36c68d1aabdd9bb2c4872fd7166c91f1679c017f`（[Run 40893189336](https://github.com/Loyel-Stone/loyel-stone.github.io/actions/runs/40893189336)）。两次 Actions 均成功，五页已由 Owner 实际访问验收。
 
 GitHub Pages 使用手动部署，**push 只更新源码，不更新线上网站**。ChatGPT Sites 是独立的托管平台，本项目尚未在该平台创建或发布。允许搜索引擎索引，实际收录尚未验证；不声明流量、用户量或学习效果。
 
@@ -66,9 +66,9 @@ git diff --check
 
 后续部署和保留历史的回滚方法见 [部署说明](docs/DEPLOYMENT.md)。不需要重复切换仓库可见性或重新启用 Pages。GitHub Pages 与 ChatGPT Sites 的版本、权限和发布流程相互独立。
 
-## 当前本地品牌与 Sites 准备
+## 当前品牌与 Sites 准备
 
-导航与 favicon 已在源码中共用一个拱门 LS SVG；导航保持 30×34，品牌文字与布局不变。此修改仍需单独手动部署才会出现在正式网站。长期定位和 Education 本轮仅复核，五页正文及 SayRight 案例没有改写。
+导航与 favicon 已在源码中共用一个拱门 LS SVG；导航保持 30×34，品牌文字与布局不变。已在 2026 年 10 月 29 日的第二次手动部署中更新至正式网站。长期定位和 Education 本轮仅复核，五页正文及 SayRight 案例没有改写。
 
 独立 Sites 适配副本位于相邻的 `../loyel-portfolio-sites`，不属于本仓库，也不应提交到这里。副本保留五页、样式、JavaScript、字体及许可证；采用 `noindex, follow`、不发布第二份 sitemap，并继续将 canonical 指向正式主站。它只有本地静态 manifest，没有 project ID、Git 仓库或远端；尚未创建 ChatGPT Site。后续注册、账户额度／平台访问分析和精选作品入口仍须 Owner 确认，见 [Sites 记录](docs/SITES-COMPATIBILITY.md)。
 
