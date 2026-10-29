@@ -9,7 +9,7 @@ Confirmed at the level supplied:
 - Formal public brand and site name: Loyel Stone. Navigation and first-person introductions may retain Loyel. GitHub account Loyel-Stone and local project directory loyel-portfolio remain unchanged. This does not disclose or imply a legal name.
 - Owner-confirmed professional positioning: Independent Software & Product Developer.
 - Owner-confirmed education: Bachelor's Degree in Artificial Intelligence; Graduated June 2026. Institution, other academic details and legal name are deliberately omitted, not pending public fields.
-- Preparing a portfolio for Hong Kong postgraduate applications, future technical roles and product enquiries.
+- A long-term independent developer portfolio documenting selected software projects, product decisions, engineering practice and substantiated project work. It is not tied to an application cycle or a job search.
 - SayRight is the sole approved featured project.
 - SayRight is an ongoing AI-assisted English expression learning product.
 - The audited implementation uses Electron, JavaScript/HTML/CSS and SQLite, with Main-owned services and Provider execution.
@@ -44,14 +44,15 @@ Historical counts overlap across stages and must not be added as one total. Earl
 - Contact contains only the confirmed GitHub profile, the separate Public Demo and the local SayRight case study. Email, LinkedIn and CV are omitted; no fake form or download is presented.
 - The owner confirmed `https://github.com/Loyel-Stone` as the public GitHub profile and `https://github.com/Loyel-Stone/sayright-demo` as the Public Demo repository. Home and Contact link to the profile; Contact and the case study identify the demo separately from the complete private product source. No contribution statistics are inferred.
 - SayRight’s role section retains AI coding-tool disclosure without claiming sole implementation authorship or assigning a code-contribution ratio. Product decisions, requirements, collaboration and acceptance work remain the stated personal scope.
-- The owner has approved search indexing at `https://loyel-stone.github.io/`, without a custom domain or tracking. All five pages omit `noindex, nofollow`, use their own canonical and matching text Open Graph metadata, and appear in the five-URL sitemap. The Home canonical is the root URL. No sharing image is supplied or inferred. This SEO approval does not authorise deployment or a repository visibility change.
+- GitHub Pages was first published on 29 October 2026 from `a018a7550ef4dc6479ee0c24e9da5ae602fc8754` by successful manual run `40810073671`. The repository is Public; the Owner accepted all five live pages. ChatGPT Sites is a separate platform and has not been created or published for this project. Later Git pushes do not update either hosted site automatically.
+- The owner has approved search indexing at `https://loyel-stone.github.io/`, without a custom domain or added analytics/tracking service. All five pages omit `noindex, nofollow`, use their own canonical and matching text Open Graph metadata, and appear in the five-URL sitemap. The Home canonical is the root URL. No sharing image is supplied or inferred. Actual search-engine indexing is unverified; no traffic or user metrics are claimed.
 
 ## Page structure
 
 | Page | Reader's question | Content |
 | --- | --- | --- |
 | Home | What is this person's focus? | Software/product positioning, Owner's working scope, SayRight learning loop and engineering themes |
-| About | What is their background and direction? | Confirmed work scope, postgraduate intention and degree/graduation; no invented personal story, interests, institution or legal name |
+| About | What is their background and direction? | Confirmed work scope, long-term project-documentation purpose and degree/graduation; no invented personal story, interests, institution or legal name |
 | SayRight | What did they build and how did they think? | Eight chapters, implementation narrative, two engineering challenges, bounded historical evidence and development status |
 | Skills | What can they substantiate? | Audited project technologies and methods, distinguished from personal proficiency ratings |
 | Contact | Where can I find their public work? | Confirmed GitHub profile, separate SayRight Public Demo and local case study |
@@ -61,7 +62,7 @@ Historical counts overlap across stages and must not be added as one total. Earl
 These are not gaps displayed to visitors or prerequisites for publication. Keep them omitted unless the owner chooses to supply verified, publishable material.
 
 - A short personal development story, if the owner chooses to add one. Do not request or infer a legal name or institution for publication.
-- Postgraduate interests and motivation. Do not imply applications or offers already exist.
+- Project motivation and product reasoning supported by a first-hand account. Do not infer academic applications, job-search status or offers.
 - Personal hands-on responsibilities and proficiency within the documented technologies; exact code contribution split and contributor attribution.
 - Public email, optional LinkedIn and a reviewed CV. GitHub profile and Public Demo URLs are confirmed.
 - SayRight start dates, a personal problem-origin account, and approved synthetic screenshots. Refresh the dated project status only from new owner-supplied evidence.

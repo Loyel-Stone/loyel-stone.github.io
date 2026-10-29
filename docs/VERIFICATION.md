@@ -1,5 +1,26 @@
 # Portfolio verification records
 
+## Current production status — 29 October 2026
+
+- Official site: `https://loyel-stone.github.io/`; Public repository `Loyel-Stone/loyel-stone.github.io`; GitHub Pages enabled.
+- First accepted production revision: `a018a7550ef4dc6479ee0c24e9da5ae602fc8754`. [Run 40810073671](https://github.com/Loyel-Stone/loyel-stone.github.io/actions/runs/40810073671) is completed/success, event `workflow_dispatch`, attempt 1, for that exact SHA. The GitHub API confirms the repository identity, Public visibility, enabled Pages and one workflow run at the time of this check.
+- Owner confirmation: all five live pages were visited and accepted on 29 October 2026. Separate read-only HTTP checks in this task returned 200 for all five and found their full HTML bytes equal to the production revision above. The live About page still contains the earlier postgraduate-purpose sentence; the source-only wording update in this task has not been deployed.
+- Indexing is permitted with canonical URLs, robots.txt and a five-page sitemap. Actual search-engine indexing, search traffic and social-platform rendering are unverified. No traffic or user-count claim is made.
+- ChatGPT Sites is a separate platform. No Site has been created, registered, saved or published for this portfolio. Its static compatibility investigation is recorded in `SITES-COMPATIBILITY.md`; featured-profile placement and account quota remain unverified.
+
+## Post-launch documentation and positioning update — 29 October 2026
+
+- README, deployment guidance, current content/design policy and this status record now distinguish the live site from the historical preparation stages. Deployment guidance covers future manual updates and normal revert commits followed by a separate manual deployment; it does not describe push-based deployment.
+- The only website change is one About paragraph: selected projects and product/engineering decisions replace the application-cycle positioning. Education, role and AI-tool disclosure, SayRight narrative and validation boundaries are preserved. The future arch + LS logo direction is documented only; no mark or asset was changed.
+- `npm run check`, `node scripts/check-pages.mjs` and `git diff --check`: PASS. Five pages, 77 local links/assets, four approved public-link occurrences, 15 tracked publication files, 91 root-domain references; existing metadata, sitemap, font/license and accessibility-structure checks pass.
+- Bounded diff verification: only the approved About paragraph differs within `dist/`; all five head blocks, the four other pages, CSS, JavaScript, fonts, favicon, robots.txt, sitemap.xml, check scripts and Pages workflow are unchanged from the starting source revision. No full browser, screen-reader or physical-device audit was rerun for this text-only edit.
+- Sites investigation used current official OpenAI documentation, installed static helper source and connector schemas only. No provisioning, packaging, source-write credential, deployment or profile edit was attempted. The tool could not read the Codex app’s own interface; an exact featured-work menu sequence is not asserted.
+- This task permits a normal source commit/push only. It does not request an Actions run, change the Pages environment or publish either host. A later deployment must be authorised and verified separately.
+
+## Historical prelaunch and content records
+
+The entries below preserve the facts and limits at each earlier stage. Their Private / not-deployed statements are historical and do not describe the current production status above.
+
 ## SEO launch preparation — 2026-10-29
 
 - Starting revision: `604d1090b41692537ad348b2e17bd06aed3b7756` on clean `main`. This entry supersedes earlier indexing restrictions; the older records below describe the policy at their respective stages.

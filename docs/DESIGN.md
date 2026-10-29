@@ -2,7 +2,7 @@
 
 ## Purpose and journey
 
-New presentation site for admissions reviewers, technical recruiters and readers interested in SayRight. Main journey: Home → SayRight → About/Skills → Contact. First decision: whether the project is relevant enough to explore. Case-study chapter links support scanning; full-page navigation and back links provide recovery. Mobile preserves the project CTA and uses an accessible disclosure menu. No backend or forms are needed for this edition.
+A long-term portfolio for Loyel Stone’s independent software and product development: selected projects, product decisions, engineering practice and substantiated work. It is not an application-specific or job-search site. Main journey: Home → SayRight → About/Skills → Contact. First decision: whether the project is relevant enough to explore. Case-study chapter links support scanning; full-page navigation and back links provide recovery. Mobile preserves the project CTA and uses an accessible disclosure menu. No backend or forms are needed for this edition.
 
 ## Chosen visual direction
 
@@ -36,6 +36,10 @@ Loyel Stone is the formal public brand and site name; navigation and first-perso
 
 The Home `.project-list` holds one semantic article per approved project: name, description, tags, status and a single local case-study link. Preserve SayRight first. A stretched native link makes the full card clickable; the same terracotta feedback applies to hover and keyboard focus, with an outer focus outline. Do not add focusable children or extra actions inside a card. No entrance animations, card movement or JavaScript click handlers are needed. The Projects navigation links to the existing collection; case pages mark that category current. See README for the extension procedure.
 
-Use semantic static HTML, CSS and small JavaScript enhancements. Keep personal facts and project claims subject to owner confirmation; omit unconfirmed material from visitor-facing pages. Do not add new projects, fetch private project data, enable analytics, add remote APIs or publish without authorization. The approved SEO policy permits indexing at `https://loyel-stone.github.io/` with no custom domain. Use one canonical per page, matching text Open Graph metadata, crawlable robots.txt and a five-page sitemap; omit unapproved sharing images. SEO metadata does not provide privacy or authorise deployment. Local preview serves only on loopback, and the GitHub repository remains private.
+Use semantic static HTML, CSS and small JavaScript enhancements. Keep personal facts and project claims subject to owner confirmation; omit unconfirmed material from visitor-facing pages. Do not add new projects, fetch private project data, enable analytics, add remote APIs or publish updates without authorization. The approved SEO policy permits indexing at `https://loyel-stone.github.io/` with no custom domain. Use one canonical per page, matching text Open Graph metadata, crawlable robots.txt and a five-page sitemap; omit unapproved sharing images. SEO metadata does not provide privacy or authorise deployment. Local preview serves only on loopback. The repository is Public and GitHub Pages is live; updates require a separate manual deployment. ChatGPT Sites has not been created for this project. Actual indexing is unverified.
+
+## Future logo direction — not implemented
+
+Retain the current arch outline and its quiet visual character. Explore replacing the internal abstract crossing lines with a recognisable L + S monogram, using an original, minimal construction suited to warm paper, Newsreader and DM Sans. Do not copy another brand. This is an Owner-approved direction for future exploration, not a completed logo or trademark claim. The current mark, favicon and CSS remain unchanged.
 
 For later Chinese support, use separate language pages and a meaningful language switch once content exists. Do not add a nonfunctional switch now.
