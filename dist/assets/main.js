@@ -31,6 +31,25 @@ if (menuButton && navigation) {
   document.documentElement.classList.add('js');
 }
 
+// The homepage has two navigation destinations within one document.
+// Hash changes preserve native scrolling, history and keyboard behaviour.
+if (document.body.dataset.page === 'home' && navigation) {
+  const homeLink = navigation.querySelector('a[href="#main"]');
+  const projectsLink = navigation.querySelector('a[href="#projects"]');
+  const updateHomeNavigation = () => {
+    const projectsCurrent = window.location.hash === '#projects';
+    if (projectsCurrent) {
+      homeLink.removeAttribute('aria-current');
+      projectsLink.setAttribute('aria-current', 'true');
+    } else {
+      homeLink.setAttribute('aria-current', 'page');
+      projectsLink.removeAttribute('aria-current');
+    }
+  };
+  window.addEventListener('hashchange', updateHomeNavigation);
+  updateHomeNavigation();
+}
+
 // Section highlighting is optional; native anchor navigation works without JavaScript.
 const chapterLinks = [...document.querySelectorAll('.case-nav a[href^="#"]')];
 const chapters = chapterLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
